@@ -1,0 +1,40 @@
+.btn {
+	color: color_theme;
+	display: inline-block;
+	position: relative;
+	&-theme {
+		background: color_theme;
+		padding: 7px 10px;
+		color: #fff;
+	}
+	&-radius {
+		borderRadius(3px);
+	}
+	&-block {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	&-circle {
+		borderRadius(50%);
+	}
+	&-icon {
+		font-size: 0;
+		mx-size(30px);
+		text-align: center;
+		display: block;
+		&:before {
+			display: block;
+			position: absolute;
+			font-family: FontAwesome
+  			content: "\f09a";
+  			font-size: 20px;
+		    top: 5px;
+		    left: 0;
+		    right: 0;
+		}
+		&.icon-facebook {
+			content: "\f09a";
+		}
+	}
+}

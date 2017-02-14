@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Kit Components</title>
+		<link rel="stylesheet" href="dist/css/style.css">
+		<link rel="stylesheet" href="plugins/code-prettify/prism.css">
+		<link rel="stylesheet" href="plugins/hamburgers_menu/hamburgers.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body class="grids-body">
+		<header class="default">
+ 			<div class="container">
+ 				<h1 class="logo"><a href="#">Kit Components</a></h1>
+ 				<div class="nav">
+ 					<button class="hamburger hamburger--collapse" type="button">
+ 					  <span class="hamburger-box">
+ 					    <span class="hamburger-inner"></span>
+ 					  </span>
+ 					</button>
+ 					<div class="clearfix"></div>
+ 					<nav class="nav-content">
+ 						<ul class="nav-list">
+ 							<li><a href="#">Início</a></li>
+ 							<li><a href="#">Como usar</a></li>
+ 							<li class="nav-haschild"><a href="#">Componentes <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+ 								<ul class="nav-submenu">
+ 									<li><a href="#">Grid</a></li>
+ 									<li><a href="#">Cards</a></li>
+ 									<li><a href="#">Headers</a></li>
+ 									<li><a href="#">Botões</a></li>
+ 									<li><a href="#">Rodapé</a></li>
+									<li><a href="#">Portfolio</a></li>
+ 								</ul>
+ 							</li>
+ 							<li><a href="#">Contribua no Github</a></li>
+ 						</ul>
+ 					</nav>
+ 				</div>
+ 			</div>
+ 		</header>
+		<section class="banner">
+			<div class="container">
+				<h2 class="banner_title">Headers</h2>
+				<p class="banner_descr">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem, enim accusantium itaque debitis veritatis magnam cumque asperiores expedita incidunt molestiae, iure doloribus doloremque iusto est, ex consequatur quibusdam alias!
+				</p>
+				<!-- <p class="banner_descr">
+					 Para criar uma grid, defina a classe .column e espefique o tamanho dos elementos dentro deles.
+				</p> -->
+<pre><code class="language-markup">
+&lt;header class="default mg-bottom">
+	&lt;div class="container">
+		&lt;h1 class="logo">Default&lt;/h1>
+		&lt;div class="nav">
+			&lt;button class="hamburger hamburger--collapse" type="button">
+			  &lt;span class="hamburger-box">
+				&lt;span class="hamburger-inner">&lt;/span>
+			  &lt;/span>
+			&lt;/button>
+			&lt;div class="clearfix">&lt;/div>
+			&lt;nav class="nav-content">
+				&lt;ul class="nav-list">
+					&lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">About Us&lt;/a>&lt;/li>
+					&lt;li class="nav-haschild">&lt;a href="#">Services &lt;i class="fa fa-angle-down" aria-hidden="true">&lt;/i>&lt;/a>
+						&lt;ul class="nav-submenu">
+							&lt;li>&lt;a href="#">Web Dsign&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="#">WordPress Design&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="#">Mobile App Development&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="#">Internet Marketing&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="#">Social Media Management&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li>&lt;a href="#">Portfolio &lt;i class="fa fa-angle-down" aria-hidden="true">&lt;/i>&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">Blog&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">Contact Us&lt;/a>&lt;/li>
+				&lt;/ul>
+			&lt;/nav>
+		&lt;/div>
+	&lt;/div>
+&lt;/header>
+
+
+</code></pre>
+
+			</div>
+		</section>
+		<header class="default mg-bottom">
+ 			<div class="container">
+ 				<h1 class="logo">Default</h1>
+ 				<div class="nav">
+ 					<button class="hamburger hamburger--collapse" type="button">
+ 					  <span class="hamburger-box">
+ 					    <span class="hamburger-inner"></span>
+ 					  </span>
+ 					</button>
+ 					<div class="clearfix"></div>
+ 					<nav class="nav-content">
+ 						<ul class="nav-list">
+ 							<li><a href="#">Home</a></li>
+ 							<li><a href="#">About Us</a></li>
+ 							<li class="nav-haschild"><a href="#">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+ 								<ul class="nav-submenu">
+ 									<li><a href="#">Web Dsign</a></li>
+ 									<li><a href="#">WordPress Design</a></li>
+ 									<li><a href="#">Mobile App Development</a></li>
+ 									<li><a href="#">Internet Marketing</a></li>
+ 									<li><a href="#">Social Media Management</a></li>
+ 								</ul>
+ 							</li>
+ 							<li><a href="#">Portfolio <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+ 							<li><a href="#">Blog</a></li>
+ 							<li><a href="#">Contact Us</a></li>
+ 						</ul>
+ 					</nav>
+ 				</div>
+ 			</div>
+ 		</header>
+
+		<header class="transparent mg-bottom">
+ 			<div class="container">
+ 				<h1 class="logo">Transparent</h1>
+ 				<div class="nav">
+ 					<button class="hamburger hamburger--collapse" type="button">
+ 					  <span class="hamburger-box">
+ 					    <span class="hamburger-inner"></span>
+ 					  </span>
+ 					</button>
+ 					<div class="clearfix"></div>
+ 					<nav class="nav-content">
+ 						<ul class="nav-list">
+ 							<li><a href="#">Home</a></li>
+ 							<li><a href="#">About Us</a></li>
+ 							<li class="nav-haschild"><a href="#">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+ 								<ul class="nav-submenu">
+ 									<li><a href="#">Web Dsign</a></li>
+ 									<li><a href="#">WordPress Design</a></li>
+ 									<li><a href="#">Mobile App Development</a></li>
+ 									<li><a href="#">Internet Marketing</a></li>
+ 									<li><a href="#">Social Media Management</a></li>
+ 								</ul>
+ 							</li>
+ 							<li><a href="#">Portfolio <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+ 							<li><a href="#">Blog</a></li>
+ 							<li><a href="#">Contact Us</a></li>
+ 						</ul>
+ 					</nav>
+ 				</div>
+ 			</div>
+ 		</header>
+
+		<!-- <header class="spaces mg-bottom">
+ 			<div class="container column">
+ 				<div class="nav sm-4-12">
+ 					<button class="hamburger hamburger--collapse" type="button">
+ 					  <span class="hamburger-box">
+ 					    <span class="hamburger-inner"></span>
+ 					  </span>
+ 					</button>
+ 					<div class="clearfix"></div>
+ 					<nav class="nav-content">
+ 						<ul class="nav-list">
+ 							<li><a href="#">Home</a></li>
+ 							<li><a href="#">About Us</a></li>
+ 							<li><a href="#">Blog</a></li>
+ 							<li><a href="#">Contact Us</a></li>
+ 						</ul>
+ 					</nav>
+ 				</div>
+ 				<h1 class="logo sm-4-12">Spaces</h1>
+				<div class="share sm-4-12">
+					<ul class="share__list">
+						<li><a class="share__item btn btn-theme btn-circle btn-icon icon-facebook" href="#">Facebook</a></li>
+						<li><a class="share__item btn btn-theme btn-circle btn-icon icon-twitter" href="#">Twitter</a></li>
+						<li><a class="share__item btn btn-theme btn-circle btn-icon icon-email" href="#">E-mail</a></li>
+					</ul>
+				</div>
+ 			</div>
+ 		</header> -->
+
+		<header class="middle mg-bottom">
+ 			<div class="container">
+ 				<h1 class="logo">Middle</h1>
+ 				<div class="nav">
+ 					<button class="hamburger hamburger--collapse" type="button">
+ 					  <span class="hamburger-box">
+ 					    <span class="hamburger-inner"></span>
+ 					  </span>
+ 					</button>
+ 					<div class="clearfix"></div>
+ 					<nav class="nav-content">
+ 						<ul class="nav-list">
+ 							<li><a href="#">Home</a></li>
+ 							<li><a href="#">About Us</a></li>
+ 							<li class="nav-haschild"><a href="#">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+ 								<ul class="nav-submenu">
+ 									<li><a href="#">Web Dsign</a></li>
+ 									<li><a href="#">WordPress Design</a></li>
+ 									<li><a href="#">Mobile App Development</a></li>
+ 									<li><a href="#">Internet Marketing</a></li>
+ 									<li><a href="#">Social Media Management</a></li>
+ 								</ul>
+ 							</li>
+ 							<li><a href="#">Portfolio <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+ 							<li><a href="#">Blog</a></li>
+ 							<li><a href="#">Contact Us</a></li>
+ 						</ul>
+ 					</nav>
+ 				</div>
+ 			</div>
+ 		</header>
+
+
+		<footer class="space-default footer">
+			<div class="container">
+				<div class="column">
+					<div class="sm-3-12">
+						<div class="footer-item">
+							<h3 class="footer-title">Super Components</h3>
+							<p>
+								Kit Components era um projeto pessoal, agora, disponível para todo mundo usar. Compartilhe conhecimento.
+							</p>
+						</div>
+					</div>
+					<div class="sm-3-12">
+						<div class="nav-footer  footer-item">
+							<h3 class="footer-title">Mapa do Site</h3>
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="#">Início</a></li>
+		 							<li><a href="#">Como usar</a></li>
+									<li><a href="#">Componentes</a></li>
+		 							<li><a href="#">Contribua no Github</a></li>
+		 							<li><a href="#">Contato</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="sm-3-12">
+						<div class="footer-social footer-item">
+							<h3 class="footer-title">Minhas redes sociais</h3>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+									/sergiojunior
+								</a>
+							</div>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									@ahserginho
+								</a>
+							</div>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
+									@ahserginho
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="sm-3-12">
+						<div class="footer-social footer-item">
+							<h3 class="footer-title">Contribua no Github!</h3>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-github" aria-hidden="true"></i>
+									/Sergioamjr
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oxygen:300,400,700" rel="stylesheet">
+		<script src="plugins/jQuery/jquery.js"></script>
+		<script src="plugins/code-prettify/prism.js"></script>
+ 		<script src="js/script.js"></script>
+	</body>
+</html>

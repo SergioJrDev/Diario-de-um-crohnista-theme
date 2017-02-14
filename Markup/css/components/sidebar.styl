@@ -1,0 +1,70 @@
+.sidebar {
+	&-item {
+		margin-bottom: 20px;
+		.widget {
+			display: flex;
+    		justify-content: space-between;
+			box-shadow: none;
+			margin-bottom: 5px;
+			.sidebar-item-content {
+				width: 100%;
+    			padding: 0;
+				border-bottom: 1px solid #eaeaea;
+				a {
+					left: 0;
+					position: relative;
+					transition: all 0.5s ease;
+				}
+				.card_content-title {
+					font-size: 16px;
+					text-transform: none;
+    				color: #333;
+					font-weight: 400;
+				}
+				&:hover {
+					background: color_bg;
+					a {
+						left: 15px;
+
+					}
+				}
+			}
+			&-cat {
+				ul {
+					width: 100%;
+					li {
+						a {
+							color: #333;
+							display: block;
+							padding: 5px 0;
+							left: 0;
+							position: relative;
+							transition: all 0.5s ease;
+						}
+						&:hover {
+							background: color_bg;
+							a {
+								left: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.widget-partness {
+			.partnes-item {
+				width: 100%;
+				margin-bottom: 5px;
+				height: 80px;
+			    overflow: hidden;
+				background-size: cover;
+			    background-position: center;
+			}
+		}
+	}
+	&-title {
+		color: #42af96;
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+}

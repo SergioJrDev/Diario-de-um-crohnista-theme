@@ -1,0 +1,86 @@
+.column {
+	/*xs-grid(12);*/
+	> div {
+		/*width: 100%;*/
+		/*padding: 0 15px;*/
+	}
+}
+.exemple-grids {
+	.column {
+	    display: flex;
+	    flex-wrap: wrap;
+		margin: 0 -15px;
+		sm-grid(12);
+	}
+
+	.grid-12 {
+		sm-grid(12);
+	}
+
+	.grid-24 {
+		sm-grid(24);
+	}
+
+	.grid-6 {
+		sm-grid(6);
+	}
+	.grid-exemple {
+		p {
+			background: #e0e0e0;
+			text-align: center;
+			padding: 8px 0;
+		}
+	}
+}
+
+@media screen and (min-width: sm) {
+	.no-pad {
+		padding: 0 !important;
+		margin: 0;
+	}
+	.column {
+	    display: flex;
+	    flex-wrap: wrap;
+		margin: 0 -15px;
+		sm-grid(12);
+	}
+
+	.grid-12 {
+		grid(12);
+	}
+
+	.grid-24 {
+		grid(24);
+	}
+
+	.grid-6 {
+		grid(6);
+	}
+
+	.column-b {
+		display: flex;
+	    flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+
+	.grid-exemple {
+		p {
+			background: #e0e0e0;
+			text-align: center;
+			padding: 8px 0;
+		}
+	}
+	.grid-12 {
+		.grid-exemple {
+			p {
+				background: #d4d4d4;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: md) {
+	.column {
+		md-grid(12);
+	}
+}

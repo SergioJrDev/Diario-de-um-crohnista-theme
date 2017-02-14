@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Kit Components</title>
+		<link rel="stylesheet" href="dist/css/style.css">
+		<link rel="stylesheet" href="plugins/code-prettify/prism.css">
+		<link rel="stylesheet" href="plugins/hamburgers_menu/hamburgers.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body class="grids-body ">
+		<header class="default">
+ 			<div class="container">
+ 				<h1 class="logo"><a href="#">Kit Components</a></h1>
+ 				<div class="nav">
+ 					<button class="hamburger hamburger--collapse" type="button">
+ 					  <span class="hamburger-box">
+ 					    <span class="hamburger-inner"></span>
+ 					  </span>
+ 					</button>
+ 					<div class="clearfix"></div>
+ 					<nav class="nav-content">
+ 						<ul class="nav-list">
+ 							<li><a href="#">Início</a></li>
+ 							<li><a href="#">Como usar</a></li>
+ 							<li class="nav-haschild"><a href="#">Componentes <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+ 								<ul class="nav-submenu">
+ 									<li><a href="#">Grid</a></li>
+ 									<li><a href="#">Cards</a></li>
+ 									<li><a href="#">Headers</a></li>
+ 									<li><a href="#">Botões</a></li>
+ 									<li><a href="#">Rodapé</a></li>
+									<li><a href="#">Portfolio</a></li>
+ 								</ul>
+ 							</li>
+ 							<li><a href="#">Contribua no Github</a></li>
+ 						</ul>
+ 					</nav>
+ 				</div>
+ 			</div>
+ 		</header>
+		<section class="banner">
+			<div class="container">
+				<h2 class="banner_title">Grid</h2>
+				<p class="banner_descr">
+					 Sistema de grid baseado em flexbox, com algumas classes simples, como no Bootstrap.
+				</p>
+				<p class="banner_descr">
+					 Para criar uma grid, defina a classe .column e espefique o tamanho dos elementos dentro deles.
+				</p>
+<pre><code data-src="include/cards.html" class="language-markup">
+&lt;div class="column">
+	&lt;div class="sm-6-6">&lt;/div>
+	&lt;div class="sm-3-6">&lt;/div>
+	&lt;div class="sm-3-6">&lt;/div>
+&lt;/div>
+</code></pre>
+<p class="banner_descr">
+	 Toda mágica acontece pela função do Stylus
+</p>
+				<pre><code class="language-css">
+grid(x) {
+	for n in (1..x) {
+	  .sm-{n}-{x} {
+		padding: 0 15px;
+		width ((0% + n / x * 100));
+	  }
+	}
+}
+//Chamando a função e passando a quantidade de colunas
+grid(12);
+				</code></pre>
+			</div>
+		</section>
+		<div class="container exemple-grids">
+			<div class="component-content space-default">
+				<h2>Grid de 6 colunas</h2>
+				<div class="column grid-6 group-grid">
+					<div class="grid-exemple sm-6-6"><p>sm-6-6</p></div>
+
+					<div class="grid-exemple sm-3-6"><p>sm-3-6</p></div>
+					<div class="grid-exemple sm-3-6"><p>sm-3-6</p></div>
+
+					<div class="grid-exemple sm-2-6"><p>sm-2-6</p></div>
+					<div class="grid-exemple sm-2-6"><p>sm-2-6</p></div>
+					<div class="grid-exemple sm-2-6"><p>sm-2-6</p></div>
+
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+					<div class="grid-exemple sm-2-6"><p>sm-2-6</p></div>
+					<div class="grid-exemple sm-2-6"><p>sm-2-6</p></div>
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+					<div class="grid-exemple sm-1-6"><p>sm-1-6</p></div>
+
+				</div>
+
+				<h2>Grid de 12 colunas</h2>
+				<div class="column grid-12 group-grid">
+					<div class="grid-exemple sm-12-12"><p>sm-12-12</p></div>
+
+					<div class="grid-exemple sm-6-12"><p>sm-6-12</p></div>
+					<div class="grid-exemple sm-6-12"><p>sm-6-12</p></div>
+
+					<div class="grid-exemple sm-4-12"><p>sm-4-12</p></div>
+					<div class="grid-exemple sm-4-12"><p>sm-4-12</p></div>
+					<div class="grid-exemple sm-4-12"><p>sm-4-12</p></div>
+
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-4-12"><p>sm-4-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+
+					<div class="grid-exemple sm-6-12"><p>sm-6-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+					<div class="grid-exemple sm-3-12"><p>sm-3-12</p></div>
+					<div class="grid-exemple sm-4-12"><p>sm-4-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+					<div class="grid-exemple sm-2-12"><p>sm-2-12</p></div>
+
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+					<div class="grid-exemple sm-1-12"><p>sm-1-12</p></div>
+				</div>
+
+				<h2>Grid de 24 colunas</h2>
+				<div class="column grid-24 group-grid">
+					<div class="grid-exemple sm-24-24"><p>sm-24-24</p></div>
+
+					<div class="grid-exemple sm-12-24"><p>sm-12-24</p></div>
+					<div class="grid-exemple sm-12-24"><p>sm-12-24</p></div>
+
+					<div class="grid-exemple sm-6-24"><p>sm-6-24</p></div>
+					<div class="grid-exemple sm-6-24"><p>sm-6-24</p></div>
+					<div class="grid-exemple sm-6-24"><p>sm-6-24</p></div>
+					<div class="grid-exemple sm-6-24"><p>sm-6-24</p></div>
+
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+
+					<div class="grid-exemple sm-6-24"><p>sm-6-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-6-24"><p>sm-6-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-3-24"><p>sm-3-24</p></div>
+					<div class="grid-exemple sm-4-24"><p>sm-4-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+					<div class="grid-exemple sm-2-24"><p>sm-2-24</p></div>
+
+				</div>
+			</div>
+		</div>
+
+		<footer class="space-default footer">
+			<div class="container">
+				<div class="column">
+					<div class="sm-3-12">
+						<div class="footer-item">
+							<h3 class="footer-title">Super Components</h3>
+							<p>
+								Kit Components era um projeto pessoal, agora, disponível para todo mundo usar. Compartilhe conhecimento.
+							</p>
+						</div>
+					</div>
+					<div class="sm-3-12">
+						<div class="nav-footer  footer-item">
+							<h3 class="footer-title">Mapa do Site</h3>
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="#">Início</a></li>
+		 							<li><a href="#">Como usar</a></li>
+									<li><a href="#">Componentes</a></li>
+		 							<li><a href="#">Contribua no Github</a></li>
+		 							<li><a href="#">Contato</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="sm-3-12">
+						<div class="footer-social footer-item">
+							<h3 class="footer-title">Minhas redes sociais</h3>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+									/sergiojunior
+								</a>
+							</div>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									@ahserginho
+								</a>
+							</div>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
+									@ahserginho
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="sm-3-12">
+						<div class="footer-social footer-item">
+							<h3 class="footer-title">Contribua no Github!</h3>
+							<div class="icon">
+								<a href="#">
+									<i class="fa fa-github" aria-hidden="true"></i>
+									/Sergioamjr
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oxygen:300,400,700" rel="stylesheet">
+		<script src="plugins/jQuery/jquery.js"></script>
+		<script src="plugins/code-prettify/prism.js"></script>
+ 		<script src="js/script.js"></script>
+	</body>
+</html>
