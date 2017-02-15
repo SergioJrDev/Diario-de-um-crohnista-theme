@@ -7,7 +7,6 @@
 				<div class="widget">
 					<div class="sidebar-item-content">
 						<a href="#"><h2 class="card_content-title"><?php the_title(); ?></h2>
-							<time class="card_content-time event-data" datatime="2017-01-10"><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo the_date(); ?></time>
 						</a>
 					</div>
 				</div>

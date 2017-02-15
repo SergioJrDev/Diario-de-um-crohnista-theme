@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-		<div class="container">
+		<!-- <div class="container">
 			<div class="owl-carousel owl-theme">
-				<?php
+				<php
 					$query = new WP_Query([ 'posts_per_page'=> 2]);
 					while($query->have_posts()) { $query->the_post();
 						if(get_field('img_slider')) {
@@ -10,7 +10,7 @@
 					}
 				?>
 			</div>
-		</div>
+		</div> -->
 		<section class="space-default">
 			<div class="container">
 				<h2 class="section-title">Últimos Posts</h2>

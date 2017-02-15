@@ -1,11 +1,21 @@
 
+.column {
+	xs-grid(12);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	> div {
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+ 
+.no-pad {
+	padding: 0 !important;
+	margin: 0;
+}
 
 @media screen and (min-width: sm) {
-
-	.no-pad {
-		padding: 0 !important;
-		margin: 0;
-	}
 	.column {
 	    display: flex;
 	    flex-wrap: wrap;

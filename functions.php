@@ -103,5 +103,34 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-
+/ Seta Meta Tags
+add_action('wp_head', 'setMeta');
+function setMeta() {
+global $post; $postParent = get_post($post->ID);
+	?>
+	<meta name="description" content="<?php echo is_home() ? bloginfo( 'description' ) : wp_trim_words($postParent->post_content, 50, null); ?>"/>
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="<?php echo is_home() ? home_url() : get_permalink(); ?>" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="<?php echo is_home() ? bloginfo( 'name' ) : get_the_title(); ?>" />
+	<meta property="og:description" content="<?php echo is_home() ? bloginfo( 'description' ) : wp_trim_words($postParent->post_content, 50, null); ?>"/>
+	<meta property="og:url" content="<?php echo is_home() ? home_url() : get_permalink(); ?>" />
+	<meta property="og:site_name" content="<?php echo get_bloginfo(); ?>" />
+	<meta property="article:publisher" content="https://www.facebook.com/diariodeumcrohnista" />
+	<meta property="article:author" content="https://www.instagram.com/ahserginho/" />
+	<meta property="article:tag" content="Doença de Crohn" />
+	<meta property="article:tag" content="DII" />
+	<meta property="article:tag" content="Retocolite ulcerativa" />
+	<meta property="article:tag" content="Diário de um Crohnista" />
+	<meta property="article:section" content="HTML" />
+	<meta property="article:published_time" content="<?php echo !is_home() ? get_post_time('Y\-m\-d\TH:i:s') : '' ?>" />
+	<meta property="og:image" content="<?php echo is_home() ? 'http://www.diariodeumcrohnista.com.br/wp-content/uploads/2016/11/diario-de-um-crohnista.jpg' : the_post_thumbnail_url(); ?>" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="<?php echo is_home() ? bloginfo( 'description' ) : wp_trim_words($postParent->post_content, 50, null); ?>"/>
+	<meta name="twitter:title" content="<?php echo is_home() ? bloginfo( 'name' ) : get_the_title(); ?>" />
+	<meta name="twitter:site" content="@ahserginho" />
+	<meta name="twitter:image" content="<?php echo is_home() ? 'http://www.diariodeumcrohnista.com.br/wp-content/uploads/2016/11/diario-de-um-crohnista.jpg' : the_post_thumbnail_url(); ?>" />
+	<meta name="twitter:creator" content="@ahserginho" />
+<?php }
 ?>
